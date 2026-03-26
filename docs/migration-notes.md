@@ -1,1 +1,2 @@
+Day 2 focused on setting up the CDK environment rather than defining infrastructure. The goal was to establish a controlled deployment mechanism before introducing any changes to the existing system. Bootstrapping prepared the AWS account for asset-based deployments, and running synth/diff ensured visibility into what CDK would generate. No resources were created yet, as the priority was ensuring that the infrastructure definition process itself was reliable.
 
