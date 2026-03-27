@@ -1,16 +1,16 @@
 {
   "version": "52.0.0",
   "files": {
-    "9088f817d2d1982cb77ec90d35e46b0d15acb6430d6788032c9073c1f83ac0c1": {
+    "6333ffd8f9391ea5c5e15893e38256c61b824916d2e1e433f06772554a3c25b2": {
       "displayName": "CloudExpenseTrackerStack Template",
       "source": {
         "path": "CloudExpenseTrackerStack.template.json",
         "packaging": "file"
       },
       "destinations": {
-        "478561403051-us-east-1-f445823c": {
+        "478561403051-us-east-1-1de6554f": {
           "bucketName": "cdk-hnb659fds-assets-478561403051-us-east-1",
-          "objectKey": "9088f817d2d1982cb77ec90d35e46b0d15acb6430d6788032c9073c1f83ac0c1.json",
+          "objectKey": "6333ffd8f9391ea5c5e15893e38256c61b824916d2e1e433f06772554a3c25b2.json",
           "region": "us-east-1",
           "assumeRoleArn": "arn:${AWS::Partition}:iam::478561403051:role/cdk-hnb659fds-file-publishing-role-478561403051-us-east-1"
         }

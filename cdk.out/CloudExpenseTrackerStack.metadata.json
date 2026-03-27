@@ -16,5 +16,17 @@
       "type": "aws:cdk:logicalId",
       "data": "CDKMetadata"
     }
+  ],
+  "/CloudExpenseTrackerStack/ExpenseTrackerIam/ExpenseTrackerLambdaRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ExpenseTrackerIamExpenseTrackerLambdaRole6C443D4B"
+    }
+  ],
+  "/CloudExpenseTrackerStack/ExpenseTrackerIam/ExpenseTrackerLambdaRole/DefaultPolicy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ExpenseTrackerIamExpenseTrackerLambdaRoleDefaultPolicyEB695393"
+    }
   ]
 }
