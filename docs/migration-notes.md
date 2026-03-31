@@ -30,3 +30,33 @@ Main checks performed:
 
 \- treated this step as a boundary-definition exercise rather than a deployment exercise
 
+
+
+\## Day 4 — DynamoDB modeled in CDK
+
+
+
+Decisions:
+
+\- Modeled the CloudDailyCosts table as infrastructure in CDK
+
+\- Used partition key `date` (string) because current access pattern is one record per day
+
+\- Chose PAY\_PER\_REQUEST to avoid premature capacity planning
+
+\- Enabled point-in-time recovery for recoverability
+
+\- Kept removal policy as DESTROY for development speed; would switch to RETAIN in a production environment
+
+\- Left encryption at DynamoDB-managed default to keep security baseline without adding KMS complexity yet
+
+
+
+Engineering reasoning:
+
+\- Optimized for simple, stable access pattern
+
+\- Avoided speculative indexes and schema complexity
+
+\- Treated recoverability and lifecycle policy as first-class infrastructure concerns
+
