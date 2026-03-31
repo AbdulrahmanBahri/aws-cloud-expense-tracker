@@ -1,4 +1,10 @@
 {
+  "/CloudExpenseTrackerStack/DynamoTableName": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DynamoTableName"
+    }
+  ],
   "/CloudExpenseTrackerStack/BootstrapVersion": [
     {
       "type": "aws:cdk:logicalId",
@@ -11,10 +17,24 @@
       "data": "CheckBootstrapVersion"
     }
   ],
+  "/CloudExpenseTrackerStack/DynamoDbConstruct/CloudDailyCostsTable": [
+    {
+      "type": "aws:cdk:hasPhysicalName",
+      "data": {
+        "Ref": "DynamoDbConstructCloudDailyCostsTableAFE6F154"
+      }
+    }
+  ],
   "/CloudExpenseTrackerStack/CDKMetadata/Default": [
     {
       "type": "aws:cdk:logicalId",
       "data": "CDKMetadata"
+    }
+  ],
+  "/CloudExpenseTrackerStack/DynamoDbConstruct/CloudDailyCostsTable/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DynamoDbConstructCloudDailyCostsTableAFE6F154"
     }
   ],
   "/CloudExpenseTrackerStack/ExpenseTrackerIam/ExpenseTrackerLambdaRole/Resource": [

@@ -1,5 +1,32 @@
 {
  "Resources": {
+  "DynamoDbConstructCloudDailyCostsTableAFE6F154": {
+   "Type": "AWS::DynamoDB::Table",
+   "Properties": {
+    "AttributeDefinitions": [
+     {
+      "AttributeName": "date",
+      "AttributeType": "S"
+     }
+    ],
+    "BillingMode": "PAY_PER_REQUEST",
+    "KeySchema": [
+     {
+      "AttributeName": "date",
+      "KeyType": "HASH"
+     }
+    ],
+    "PointInTimeRecoverySpecification": {
+     "PointInTimeRecoveryEnabled": true
+    },
+    "TableName": "CloudDailyCosts"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "CloudExpenseTrackerStack/DynamoDbConstruct/CloudDailyCostsTable/Resource"
+   }
+  },
   "ExpenseTrackerIamExpenseTrackerLambdaRole6C443D4B": {
    "Type": "AWS::IAM::Role",
    "Properties": {
@@ -55,7 +82,12 @@
         "dynamodb:Scan"
        ],
        "Effect": "Allow",
-       "Resource": "arn:aws:dynamodb:us-east-1:478561403051:table/CloudDailyCosts",
+       "Resource": {
+        "Fn::GetAtt": [
+         "DynamoDbConstructCloudDailyCostsTableAFE6F154",
+         "Arn"
+        ]
+       },
        "Sid": "AllowDynamoDbAccess"
       },
       {
@@ -81,10 +113,18 @@
   "CDKMetadata": {
    "Type": "AWS::CDK::Metadata",
    "Properties": {
-    "Analytics": "v2:deflate64:H4sIAAAAAAAA/zPSMzIx0TNQTCwv1k1OydbNyUzSqw4uSUzO1kksL47PTMzVqw7Kz0nVcU7LA9MB+TmZyZUgLoRVW6sTUFmSkZ+nb6xnaKJnrJhVnJmpW1SaV5KZm6oXBKEBZMTbKWYAAAA="
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/yWKWw7CIBQF19J/uGrLDlyADfpvLg8jlocpkIYQ9m6Er5kzOTPMjMF5wiNSqTZqjYB6Tyg3gkd8VlU8uqAE1AcKq8n15bs0YtBB5WG0zjVYI8t/DmuNcB1D3mX/3HL65tTIWtI7+NMCFwbL9InG0D37ZJwGPvgDfRTlGpUAAAA="
    },
    "Metadata": {
     "aws:cdk:path": "CloudExpenseTrackerStack/CDKMetadata/Default"
+   }
+  }
+ },
+ "Outputs": {
+  "DynamoTableName": {
+   "Description": "DynamoDB table name for daily cloud cost records",
+   "Value": {
+    "Ref": "DynamoDbConstructCloudDailyCostsTableAFE6F154"
    }
   }
  },
