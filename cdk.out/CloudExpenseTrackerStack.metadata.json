@@ -5,6 +5,12 @@
       "data": "DynamoTableName"
     }
   ],
+  "/CloudExpenseTrackerStack/LambdaFunctionName": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "LambdaFunctionName"
+    }
+  ],
   "/CloudExpenseTrackerStack/BootstrapVersion": [
     {
       "type": "aws:cdk:logicalId",
@@ -41,6 +47,12 @@
     {
       "type": "aws:cdk:logicalId",
       "data": "ExpenseTrackerIamExpenseTrackerLambdaRole6C443D4B"
+    }
+  ],
+  "/CloudExpenseTrackerStack/LambdaConstruct/CostReporterFunction/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "LambdaConstructCostReporterFunction578CB032"
     }
   ],
   "/CloudExpenseTrackerStack/ExpenseTrackerIam/ExpenseTrackerLambdaRole/DefaultPolicy/Resource": [

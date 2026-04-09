@@ -3,6 +3,7 @@ from aws_cdk import Stack, CfnOutput
 
 from cloud_expense_tracker.constructs.iam_construct import ExpenseTrackerIamConstruct
 from cloud_expense_tracker.constructs.dynamodb_construct import DynamoDbConstruct
+from cloud_expense_tracker.constructs.lambda_construct import LambdaConstruct
 
 
 class ExpenseTrackerStack(Stack):
@@ -31,4 +32,24 @@ class ExpenseTrackerStack(Stack):
             "ExpenseTrackerIam",
             dynamodb_table_arn=self.dynamodb.table.table_arn,
             sns_topic_arn=sns_topic_arn,
+        )
+
+        # Day 4 - Lambda added in CDK
+        self.lambda_construct = LambdaConstruct(
+            self,
+            "LambdaConstruct",
+            function_name="cloud-expense-tracker",
+            role=self.iam.lambda_role,
+            table_name=self.dynamodb.table.table_name,
+            sns_topic_arn=sns_topic_arn,
+            cost_threshold="5",
+            memory_size=128,
+            timeout_seconds=10,
+        )
+
+        CfnOutput(
+            self,
+            "LambdaFunctionName",
+            value=self.lambda_construct.function.function_name,
+            description="Cost reporter Lambda function name",
         )

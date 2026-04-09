@@ -1,16 +1,31 @@
 {
   "version": "52.0.0",
   "files": {
-    "2999c6e73afda96eb5b35853dd69d5b44ba4f26823cbdbf7281d8b85a78fed5d": {
+    "74232423b5c7d4245e314c6735a436f921a1b9c55f12f3e246e85aac93e573ce": {
+      "displayName": "LambdaConstruct/CostReporterFunction/Code",
+      "source": {
+        "path": "asset.74232423b5c7d4245e314c6735a436f921a1b9c55f12f3e246e85aac93e573ce",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "478561403051-us-east-1-e2a03096": {
+          "bucketName": "cdk-hnb659fds-assets-478561403051-us-east-1",
+          "objectKey": "74232423b5c7d4245e314c6735a436f921a1b9c55f12f3e246e85aac93e573ce.zip",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::478561403051:role/cdk-hnb659fds-file-publishing-role-478561403051-us-east-1"
+        }
+      }
+    },
+    "e38bb01ac60792e589e109a55f1934d15363b989133bca187a007ec014069038": {
       "displayName": "CloudExpenseTrackerStack Template",
       "source": {
         "path": "CloudExpenseTrackerStack.template.json",
         "packaging": "file"
       },
       "destinations": {
-        "478561403051-us-east-1-71b39548": {
+        "478561403051-us-east-1-c534dbb0": {
           "bucketName": "cdk-hnb659fds-assets-478561403051-us-east-1",
-          "objectKey": "2999c6e73afda96eb5b35853dd69d5b44ba4f26823cbdbf7281d8b85a78fed5d.json",
+          "objectKey": "e38bb01ac60792e589e109a55f1934d15363b989133bca187a007ec014069038.json",
           "region": "us-east-1",
           "assumeRoleArn": "arn:${AWS::Partition}:iam::478561403051:role/cdk-hnb659fds-file-publishing-role-478561403051-us-east-1"
         }
