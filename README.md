@@ -73,8 +73,8 @@ cdk deploy
 
 Notes:
 
-Requires AWS credentials configured
-Cost Explorer must be enabled
+1.Requires AWS credentials configured
+2.Cost Explorer must be enabled
 
 **Final thought**
 
