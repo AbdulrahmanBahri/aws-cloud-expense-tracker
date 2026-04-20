@@ -38,15 +38,6 @@ COST_THRESHOLD = 5 → 999
 
 Everything still worked, but alerts stopped. No errors.
 
-**If I scale this**
-
-I’d add:
-
-monitoring (CloudWatch alarms)
-better error handling
-tighter IAM
-multiple environments
-
 ---
 
 ## If I scale this
