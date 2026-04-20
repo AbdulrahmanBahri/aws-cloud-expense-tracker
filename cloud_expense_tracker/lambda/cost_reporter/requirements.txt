@@ -1,1 +1,1 @@
-
+# empty (uses AWS default boto3)
