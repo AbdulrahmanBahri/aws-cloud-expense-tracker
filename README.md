@@ -47,6 +47,35 @@ better error handling
 tighter IAM
 multiple environments
 
+---
+
+## If I scale this
+
+I’d add:
+
+- monitoring (CloudWatch alarms)  
+- better error handling  
+- tighter IAM  
+- multiple environments  
+
+---
+
+## Running this project
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+
+cdk bootstrap
+cdk deploy
+```
+
+Notes:
+
+Requires AWS credentials configured
+Cost Explorer must be enabled
+
 **Final thought**
 
 Building the system was easy.
