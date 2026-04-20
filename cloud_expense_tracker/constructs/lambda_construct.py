@@ -26,7 +26,7 @@ class LambdaConstruct(Construct):
             function_name=function_name,
             runtime=_lambda.Runtime.PYTHON_3_12,
             handler="app.lambda_handler",
-            code=_lambda.Code.from_asset("cloud_expense_tracker/lambda/cost_reporter"),
+            code=_lambda.Code.from_asset("lambda/cost_reporter"),
             role=role,
             memory_size=memory_size,
             timeout=Duration.seconds(timeout_seconds),
