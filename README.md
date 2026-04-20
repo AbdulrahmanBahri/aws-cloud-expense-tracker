@@ -6,7 +6,6 @@ At first, everything was created manually in the AWS console.
 
 It worked, but I had problems:
 
-
 hard to reproduce
 not clear what’s configured where
 risky to change anything
